@@ -1,0 +1,29 @@
+{
+  "name": "markdown-transformer",
+  "version": "0.0.0-beta",
+  "description": "Markdownを解析し、特定の要件に基づいたテキスト構造へ変換します。",
+  "keywords": [
+    "javascript",
+    "webapi"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/deltanabla/markdown-transformer.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/deltanabla/markdown-transformer.js/issues"
+  },
+  "homepage": "https://github.com/deltanabla/markdown-transformer.js",
+  "license": "MIT",
+  "author": {
+    "name": "一二一二一二",
+    "url": "https://github.com/deltanabla"
+  },
+  "files": [
+    "./index.js",
+    "./src"
+  ],
+  "private": true,
+  "exports": "./index.js",
+  "type": "module"
+}

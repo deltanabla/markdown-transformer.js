@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <meta name="color-scheme" content="dark">
+    <meta name="theme-color" content="#ad0025">
+    <meta name="author" content="一二一二一二">
+    <link rel="author" href="https://github.com/deltanabla">
+    <link rel="icon" type="image/svg+xml" href="docs/assets/svg/favicon.svg"
+      sizes="any">
+    <title>Markdown Transformer</title>
+    <meta name="description" content="Markdownを解析し、特定の要件に基づいたテキスト構造へ変換します。">
+    <link rel="stylesheet" href="docs/assets/css/main.css">
+    <script type="module" src="docs/assets/js/main.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1><label for="dn12mt-text-field">Markdown Transformer</label></h1>
+    </header>
+    <main>
+      <form name="dn12mt">
+        <textarea id="dn12mt-text-field" name="markdown" cols="40" rows="4"
+          placeholder="Hello *world*" required disabled></textarea>
+        <button disabled>変換</button>
+        <button type="reset" disabled>消去</button>
+        <output name="snackbar" for="dn12mt-text-field"
+          popover="manual"></output>
+      </form>
+      <article>
+        <h2>変換結果</h2>
+        <article>
+          <h3>日本語</h3>
+          <button commandfor="dn12mt-output-jlreq" command="--dn12mt-copy"
+            disabled>コピー</button>
+          <output for="dn12mt-output-jlreq" popover="manual"></output>
+          <pre><code id="dn12mt-output-jlreq" data-dn12mt-output="jlreq"></code></pre>
+        </article>
+      </article>
+    </main>
+    <footer>
+      <address>
+        <a href="https://github.com/deltanabla/markdown-transformer.js">
+          GitHub
+        </a>
+      </address>
+    </footer>
+  </body>
+</html>
