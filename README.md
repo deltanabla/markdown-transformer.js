@@ -6,8 +6,7 @@ Markdownを解析し、特定の要件に基づいたテキスト構造へ変換
 
 ブラウザーですぐに試せます。
 
-1.  リポジトリーをクローンまたはダウンロードします。
-1.  [`/index.html`](./index.html)をブラウザーで開きます。
+1.  [ライブ・デモ](https://deltanabla.github.io/markdown-transformer.js/)を開きます。
 1.  Markdownを入力し、**変換**ボタンを押して、結果を**コピー**してください。
 
 ## 機能
