@@ -12,7 +12,7 @@ Markdownを解析し、特定の要件に基づいたテキスト構造へ変換
 ## 機能
 
 ```js
-import {MarkdownTransformer, JlReqTransformer} from './index.js';
+import {MarkdownTransformer, JlReqTransformer} from 'https://cdn.jsdelivr.net/gh/deltanabla/markdown-transformer.js@0.0.0/index.js';
 
 const markdown = 'Hello *world*';
 const transformer = new MarkdownTransformer(markdown);
