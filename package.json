@@ -1,6 +1,6 @@
 {
   "name": "markdown-transformer",
-  "version": "0.0.0-beta",
+  "version": "0.0.0",
   "description": "Markdownを解析し、特定の要件に基づいたテキスト構造へ変換します。",
   "keywords": [
     "javascript",

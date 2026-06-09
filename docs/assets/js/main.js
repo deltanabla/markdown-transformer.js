@@ -161,7 +161,7 @@ function copyElementText(target) {
     })
     .then((labelText) => {
       const snackbars = target.ownerDocument
-        .querySelectorAll(`output[popover][for~="${target.id}"]`);
+        .querySelectorAll(`output[popover][for~='${target.id}']`);
 
       if (labelText instanceof Error) {
         for (const snackbar of snackbars) {
