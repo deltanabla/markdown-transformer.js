@@ -5,7 +5,7 @@
  */
 
 import * as transformers from './../../../index.js';
-import {SnackbarAttacher} from 'https://cdn.jsdelivr.net/gh/deltanabla/jl.css@0.0.0/index.js';
+import {SnackbarAttacher} from 'https://cdn.jsdelivr.net/gh/deltanabla/jl.css@0.1.0/index.js';
 
 const COPY_COMMAND = '--dn12mt-copy';
 setup(document.forms.dn12mt);
@@ -84,6 +84,10 @@ function transformMarkdown(input) {
   };
   try {
     transformBy('jlreq', new transformers.JlReqTransformer());
+    transformBy(
+      'pixiv-novel',
+      new transformers.PixivNovelTransformer(),
+    );
   } catch (error) {
     showSnackbarError(input.form.elements.snackbar, error);
     return;

@@ -117,6 +117,25 @@ export class Transformer extends HtmlTransformer {
     );
   }
 
+  /** その他のインライン要素の内容をフォーマットします。 */
+  formatHtmlInline(content) {
+    const formatted = super.formatHtmlInline(content);
+    if (!(this.currentInlineNode instanceof HTMLElement)) {
+      return formatted;
+    }
+    switch (this.currentInlineNode.localName) {
+      case 'rt':
+        return this.applyBrackets(
+          '（',
+          '〔',
+          formatted,
+          '〕',
+          '）',
+        );
+    }
+    return formatted;
+  }
+
   #indenter;
   get indenter() {
     return this.#indenter;
