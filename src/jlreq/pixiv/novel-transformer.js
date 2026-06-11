@@ -5,6 +5,9 @@
  */
 
 import {Transformer as JlReqTransformer} from '../transformer.js';
+import {LineHeadIndenter} from './line-head-indenter.js';
+import {LineSpacer} from '../line-spacer.js';
+import {BracketEncloser} from '../bracket-encloser.js';
 
 export class NovelTransformer extends JlReqTransformer {
   formatHeading(content) {
@@ -58,6 +61,21 @@ export class NovelTransformer extends JlReqTransformer {
   resolveHeadingLevel(element) {
     const level = super.resolveHeadingLevel(element) ?? 1;
     return level - 1;
+  }
+
+  /**
+   * インスタンスを初期化します。
+   * @param {{
+   *     indenter: ?LineHeadIndenter,
+   *     lineSpacer: ?LineSpacer,
+   *     bracketEncloser: ?BracketEncloser,
+   * }} options オプション設定。
+   */
+  constructor(options = {}) {
+    super({
+      ...{indenter: new LineHeadIndenter()},
+      ...options,
+    });
   }
 
   /**
